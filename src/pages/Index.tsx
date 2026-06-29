@@ -50,7 +50,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-accent-foreground">
       {/* NAV */}
-      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
+      <header className="sticky top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="container flex items-center justify-between h-16">
           <a href="#home" className="font-mono text-sm font-medium tracking-tight">
             neuro<span className="text-accent">.</span>chat
