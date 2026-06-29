@@ -91,18 +91,18 @@ const Index = () => {
             <span className="h-2 w-2 rounded-full bg-accent" />
             <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Powered by ChatGPT</span>
           </div>
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight leading-[0.95] max-w-4xl animate-rise" style={{ animationDelay: '0.1s' }}>
-            Умные чат-боты,<br />которые <span className="text-accent">говорят</span><br />как человек.
+          <h1 className="text-[2.25rem] leading-[1.05] sm:text-6xl md:text-8xl md:leading-[0.95] font-extrabold tracking-tight max-w-4xl animate-rise" style={{ animationDelay: '0.1s' }}>
+            Умные чат-боты, которые <span className="text-accent">говорят</span> как человек.
           </h1>
           <p className="mt-6 md:mt-8 text-base md:text-xl text-muted-foreground max-w-xl animate-rise" style={{ animationDelay: '0.2s' }}>
             Разрабатываем AI-ассистентов на базе ChatGPT и подключаем их к любым платформам — от сайта до мессенджеров.
           </p>
           <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-rise" style={{ animationDelay: '0.3s' }}>
-            <Button size="lg" className="rounded-none h-12 px-8 bg-foreground text-background hover:bg-accent transition-colors">
+            <Button size="lg" className="w-full sm:w-auto rounded-none h-12 px-8 bg-foreground text-background hover:bg-accent transition-colors">
               Заказать бота
               <Icon name="ArrowRight" size={18} className="ml-2" />
             </Button>
-            <Button size="lg" variant="outline" className="rounded-none h-12 px-8 border-foreground/20 hover:bg-secondary">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-none h-12 px-8 border-foreground/20 hover:bg-secondary">
               Смотреть работы
             </Button>
           </div>
@@ -143,13 +143,13 @@ const Index = () => {
 
           {/* CODE BLOCK */}
           <div className="mt-px grid lg:grid-cols-2 gap-px bg-border border border-t-0 border-border">
-            <div className="bg-foreground text-background p-5 md:p-8 font-mono text-xs md:text-sm overflow-x-auto">
+            <div className="bg-foreground text-background p-5 md:p-8 font-mono text-[11px] md:text-sm overflow-x-auto">
               <div className="flex gap-2 mb-5 opacity-60">
                 <span className="h-3 w-3 rounded-full bg-background/40" />
                 <span className="h-3 w-3 rounded-full bg-background/40" />
                 <span className="h-3 w-3 rounded-full bg-background/40" />
               </div>
-              <pre className="whitespace-pre leading-relaxed"><code>{codeSnippet}<span className="cursor-blink">▍</span></code></pre>
+              <pre className="whitespace-pre leading-relaxed min-w-max"><code>{codeSnippet}<span className="cursor-blink">▍</span></code></pre>
             </div>
             <div className="bg-background p-6 md:p-10 flex flex-col justify-center">
               <h3 className="text-xl md:text-2xl font-semibold mb-3">Простое подключение по API</h3>
