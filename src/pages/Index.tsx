@@ -84,20 +84,20 @@ const Index = () => {
       </header>
 
       {/* HERO */}
-      <section id="home" className="relative pt-40 pb-28 overflow-hidden">
+      <section id="home" className="relative pt-28 md:pt-40 pb-20 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 grid-lines opacity-60 pointer-events-none" />
         <div className="container relative">
-          <div className="flex items-center gap-2 mb-8 animate-rise">
+          <div className="flex items-center gap-2 mb-6 md:mb-8 animate-rise">
             <span className="h-2 w-2 rounded-full bg-accent" />
             <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">Powered by ChatGPT</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-extrabold tracking-tight leading-[0.95] max-w-4xl animate-rise" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-extrabold tracking-tight leading-[0.95] max-w-4xl animate-rise" style={{ animationDelay: '0.1s' }}>
             Умные чат-боты,<br />которые <span className="text-accent">говорят</span><br />как человек.
           </h1>
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-xl animate-rise" style={{ animationDelay: '0.2s' }}>
+          <p className="mt-6 md:mt-8 text-base md:text-xl text-muted-foreground max-w-xl animate-rise" style={{ animationDelay: '0.2s' }}>
             Разрабатываем AI-ассистентов на базе ChatGPT и подключаем их к любым платформам — от сайта до мессенджеров.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4 animate-rise" style={{ animationDelay: '0.3s' }}>
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 animate-rise" style={{ animationDelay: '0.3s' }}>
             <Button size="lg" className="rounded-none h-12 px-8 bg-foreground text-background hover:bg-accent transition-colors">
               Заказать бота
               <Icon name="ArrowRight" size={18} className="ml-2" />
@@ -107,11 +107,11 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border animate-rise" style={{ animationDelay: '0.4s' }}>
+          <div className="mt-14 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border animate-rise" style={{ animationDelay: '0.4s' }}>
             {[['120+', 'ботов запущено'], ['98%', 'точность ответов'], ['8', 'платформ'], ['24/7', 'без выходных']].map(([v, l]) => (
-              <div key={l} className="bg-background p-6">
-                <div className="font-mono text-3xl font-semibold">{v}</div>
-                <div className="text-sm text-muted-foreground mt-1">{l}</div>
+              <div key={l} className="bg-background p-5 md:p-6">
+                <div className="font-mono text-2xl md:text-3xl font-semibold">{v}</div>
+                <div className="text-xs md:text-sm text-muted-foreground mt-1">{l}</div>
               </div>
             ))}
           </div>
@@ -119,22 +119,22 @@ const Index = () => {
       </section>
 
       {/* TECH */}
-      <section id="tech" className="py-28 border-t border-border">
+      <section id="tech" className="py-20 md:py-28 border-t border-border">
         <div className="container">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 md:mb-16">
             <div>
               <span className="font-mono text-xs tracking-widest text-accent uppercase">/ Технологии</span>
-              <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">Что под капотом</h2>
+              <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight">Что под капотом</h2>
             </div>
             <p className="text-muted-foreground max-w-sm">Стек, который обеспечивает естественные диалоги и точные ответы на ваших данных.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
             {tech.map((t) => (
-              <div key={t.id} className="bg-background p-10 group hover:bg-secondary transition-colors">
+              <div key={t.id} className="bg-background p-6 md:p-10 group hover:bg-secondary transition-colors">
                 <div className="flex items-baseline gap-4">
                   <span className="font-mono text-sm text-accent">{t.id}</span>
-                  <h3 className="text-2xl font-semibold">{t.name}</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold">{t.name}</h3>
                 </div>
                 <p className="mt-4 text-muted-foreground leading-relaxed">{t.desc}</p>
               </div>
@@ -143,7 +143,7 @@ const Index = () => {
 
           {/* CODE BLOCK */}
           <div className="mt-px grid lg:grid-cols-2 gap-px bg-border border border-t-0 border-border">
-            <div className="bg-foreground text-background p-8 font-mono text-sm overflow-x-auto">
+            <div className="bg-foreground text-background p-5 md:p-8 font-mono text-xs md:text-sm overflow-x-auto">
               <div className="flex gap-2 mb-5 opacity-60">
                 <span className="h-3 w-3 rounded-full bg-background/40" />
                 <span className="h-3 w-3 rounded-full bg-background/40" />
@@ -151,8 +151,8 @@ const Index = () => {
               </div>
               <pre className="whitespace-pre leading-relaxed"><code>{codeSnippet}<span className="cursor-blink">▍</span></code></pre>
             </div>
-            <div className="bg-background p-10 flex flex-col justify-center">
-              <h3 className="text-2xl font-semibold mb-3">Простое подключение по API</h3>
+            <div className="bg-background p-6 md:p-10 flex flex-col justify-center">
+              <h3 className="text-xl md:text-2xl font-semibold mb-3">Простое подключение по API</h3>
               <p className="text-muted-foreground mb-6">Несколько строк — и ChatGPT уже отвечает в вашем продукте. Мы берём на себя всю настройку, безопасность ключей и масштабирование.</p>
               <a href="#services" className="font-mono text-sm text-accent inline-flex items-center hover:gap-3 gap-2 transition-all">
                 Как мы интегрируем <Icon name="ArrowRight" size={16} />
@@ -161,7 +161,7 @@ const Index = () => {
           </div>
 
           {/* PLATFORMS */}
-          <div className="mt-16">
+          <div className="mt-12 md:mt-16">
             <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase mb-6">Примеры подключения к платформам</p>
             <div className="flex flex-wrap gap-3">
               {platforms.map((p) => (
@@ -175,15 +175,15 @@ const Index = () => {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-28 border-t border-border bg-secondary/40">
+      <section id="services" className="py-20 md:py-28 border-t border-border bg-secondary/40">
         <div className="container">
           <span className="font-mono text-xs tracking-widest text-accent uppercase">/ Услуги</span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight mb-16 max-w-2xl">От идеи до работающего ассистента</h2>
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight mb-12 md:mb-16 max-w-2xl">От идеи до работающего ассистента</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
             {services.map((s) => (
-              <div key={s.title} className="bg-background p-8 hover:bg-secondary transition-colors">
-                <Icon name={s.icon} size={28} className="text-accent mb-6" />
-                <h3 className="text-xl font-semibold mb-3">{s.title}</h3>
+              <div key={s.title} className="bg-background p-6 md:p-8 hover:bg-secondary transition-colors">
+                <Icon name={s.icon} size={28} className="text-accent mb-4 md:mb-6" />
+                <h3 className="text-lg md:text-xl font-semibold mb-3">{s.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             ))}
@@ -192,16 +192,16 @@ const Index = () => {
       </section>
 
       {/* WORK */}
-      <section id="work" className="py-28 border-t border-border">
+      <section id="work" className="py-20 md:py-28 border-t border-border">
         <div className="container">
           <span className="font-mono text-xs tracking-widest text-accent uppercase">/ Портфолио</span>
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight mb-16">Боты в деле</h2>
+          <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight mb-12 md:mb-16">Боты в деле</h2>
           <div className="border-t border-border">
             {work.map((w) => (
-              <div key={w.title} className="group border-b border-border py-8 grid md:grid-cols-12 gap-4 items-center hover:bg-secondary/50 transition-colors px-2">
+              <div key={w.title} className="group border-b border-border py-6 md:py-8 grid md:grid-cols-12 gap-2 md:gap-4 md:items-center hover:bg-secondary/50 transition-colors px-2">
                 <span className="md:col-span-2 font-mono text-xs tracking-widest text-muted-foreground">{w.tag}</span>
-                <h3 className="md:col-span-4 text-2xl font-semibold">{w.title}</h3>
-                <p className="md:col-span-4 text-muted-foreground">{w.desc}</p>
+                <h3 className="md:col-span-4 text-xl md:text-2xl font-semibold">{w.title}</h3>
+                <p className="md:col-span-4 text-sm md:text-base text-muted-foreground">{w.desc}</p>
                 <span className="md:col-span-2 font-mono text-accent md:text-right">{w.metric}</span>
               </div>
             ))}
@@ -210,13 +210,13 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-28 border-t border-border bg-foreground text-background">
+      <section className="py-20 md:py-28 border-t border-border bg-foreground text-background">
         <div className="container text-center">
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight">
+          <h2 className="text-3xl md:text-6xl font-extrabold tracking-tight max-w-3xl mx-auto leading-tight">
             Запустим вашего AI-бота за пару недель
           </h2>
           <p className="mt-6 text-background/70 max-w-lg mx-auto">Расскажите о задаче — предложим решение и оценим сроки.</p>
-          <Button size="lg" className="mt-10 rounded-none h-12 px-10 bg-accent text-accent-foreground hover:bg-background hover:text-foreground transition-colors">
+          <Button size="lg" className="mt-8 md:mt-10 rounded-none h-12 px-10 bg-accent text-accent-foreground hover:bg-background hover:text-foreground transition-colors">
             Обсудить проект
             <Icon name="ArrowRight" size={18} className="ml-2" />
           </Button>
